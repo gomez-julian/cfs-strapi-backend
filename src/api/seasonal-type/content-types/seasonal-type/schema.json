@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasonal_types",
+  "info": {
+    "singularName": "seasonal-type",
+    "pluralName": "seasonal-types",
+    "displayName": "SeasonalType"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "string"
+    },
+    "seasonal_reports": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::seasonal-report.seasonal-report",
+      "mappedBy": "seasonal_type"
+    }
+  }
+}

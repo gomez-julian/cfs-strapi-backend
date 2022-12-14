@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "seasonal_reports",
+  "info": {
+    "singularName": "seasonal-report",
+    "pluralName": "seasonal-reports",
+    "displayName": "SeasonalReport"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "seasonal_type": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::seasonal-type.seasonal-type",
+      "inversedBy": "seasonal_reports"
+    },
+    "maintenance_operator": {
+      "type": "string",
+      "required": true
+    },
+    "maintenance_enginner": {
+      "type": "string"
+    },
+    "operator_on_turn": {
+      "type": "string"
+    },
+    "fire_network": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::section.section",
+      "inversedBy": "seasonal_reports"
+    }
+  }
+}
