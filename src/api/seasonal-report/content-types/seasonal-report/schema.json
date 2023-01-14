@@ -4,7 +4,8 @@
   "info": {
     "singularName": "seasonal-report",
     "pluralName": "seasonal-reports",
-    "displayName": "SeasonalReport"
+    "displayName": "SeasonalReport",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -29,12 +30,6 @@
     },
     "fire_network": {
       "type": "string"
-    },
-    "sections": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::section.section",
-      "inversedBy": "seasonal_reports"
     }
   }
 }

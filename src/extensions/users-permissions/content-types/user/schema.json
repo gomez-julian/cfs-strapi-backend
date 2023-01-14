@@ -63,7 +63,7 @@
       "inversedBy": "users",
       "configurable": false
     },
-    "card_id": {
+    "cardId": {
       "type": "string",
       "unique": true,
       "required": true
@@ -81,6 +81,25 @@
     },
     "address": {
       "type": "string"
+    },
+    "fullname": {
+      "type": "string"
+    },
+    "level": {
+      "type": "enumeration",
+      "enum": [
+        "Administrador",
+        "Desarrollador",
+        "Operativo"
+      ],
+      "default": "Operativo"
+    },
+    "signature": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

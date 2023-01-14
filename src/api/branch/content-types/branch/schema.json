@@ -33,11 +33,11 @@
     "representative": {
       "type": "string"
     },
-    "phonenumber": {
+    "phoneNumber": {
       "type": "string",
       "maxLength": 15
     },
-    "landlinenumber": {
+    "landlineNumber": {
       "type": "string",
       "maxLength": 15
     },

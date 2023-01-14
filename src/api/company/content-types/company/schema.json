@@ -4,7 +4,8 @@
   "info": {
     "singularName": "company",
     "pluralName": "companies",
-    "displayName": "Company"
+    "displayName": "Company",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,11 +24,12 @@
       "required": true
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "description": {
       "type": "string"
@@ -37,6 +39,10 @@
       "relation": "oneToMany",
       "target": "api::branch.branch",
       "mappedBy": "company"
+    },
+    "isDeleted": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "seasonal-type",
     "pluralName": "seasonal-types",
-    "displayName": "SeasonalType"
+    "displayName": "SeasonalType",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,6 +24,12 @@
       "relation": "oneToMany",
       "target": "api::seasonal-report.seasonal-report",
       "mappedBy": "seasonal_type"
+    },
+    "sections": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::section.section",
+      "inversedBy": "seasonal_types"
     }
   }
 }

@@ -11,12 +11,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "seasonal_reports": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::seasonal-report.seasonal-report",
-      "inversedBy": "sections"
-    },
     "name": {
       "type": "string",
       "required": true
@@ -29,6 +23,12 @@
       "relation": "oneToMany",
       "target": "api::question.question",
       "mappedBy": "section"
+    },
+    "seasonal_types": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::seasonal-type.seasonal-type",
+      "mappedBy": "sections"
     }
   }
 }
