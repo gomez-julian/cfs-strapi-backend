@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "section_tests",
+  "info": {
+    "singularName": "section-test",
+    "pluralName": "section-tests",
+    "displayName": "SectionTest"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "questions": {
+      "type": "json"
+    }
+  }
+}

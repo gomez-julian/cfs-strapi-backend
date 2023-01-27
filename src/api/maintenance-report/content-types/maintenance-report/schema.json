@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maintenance_reports",
+  "info": {
+    "singularName": "maintenance-report",
+    "pluralName": "maintenance-reports",
+    "displayName": "MaintenanceReport",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "branch": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::branch.branch"
+    },
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "commissioned": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "reviewedby": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "approvedby": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "iscompleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "isdeleted": {
+      "type": "boolean",
+      "default": false
+    },
+    "content": {
+      "type": "json"
+    },
+    "codigo": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    }
+  }
+}

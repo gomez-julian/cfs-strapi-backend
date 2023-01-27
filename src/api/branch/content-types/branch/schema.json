@@ -40,12 +40,6 @@
     "landlineNumber": {
       "type": "string",
       "maxLength": 15
-    },
-    "reports": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::report.report",
-      "mappedBy": "branch"
     }
   }
 }
